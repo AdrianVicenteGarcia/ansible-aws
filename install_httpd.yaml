@@ -9,18 +9,24 @@
 
     - name: Start service apache, if not started
       service:
-          name: httpd
-          state: started
+        name: httpd
+        state: started
 
     - name: Git install
       yum:
-          name: git
-          state: latest
+        name: git
+        state: latest
 
     - name: Git veo-2048
       ansible.builtin.git:
-          repo: 'https://github.com/AdrianVicenteGarcia/vue-2048.git/'
-          dest: /var/www/html/
+        repo: 'https://github.com/AdrianVicenteGarcia/vue-2048.git'
+        dest: /var/www/html/
+
+    - name: Copy file for index.html
+      copy:
+        src: ../vue-2048/dist/
+        dest: /var/www/html/
+
 
 
 

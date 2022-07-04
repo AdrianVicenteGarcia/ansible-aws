@@ -1,6 +1,0 @@
----
-- hosts:
-  tasks:
-    - name: Install vue-2048
-      apt:
-      become:
