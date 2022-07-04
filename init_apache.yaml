@@ -1,7 +1,7 @@
 ---
-- hosts: web
+- hosts: all
   tasks:
     - name: Start service apache, if not started
       service:
-        name: apache
+        name: httpd
         state: started
