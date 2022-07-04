@@ -20,7 +20,6 @@
     - name: Git veo-2048
       ansible.builtin.git:
           repo: 'https://github.com/AdrianVicenteGarcia/vue-2048.git/'
-
           dest: /var/www/html/
 
 
