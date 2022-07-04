@@ -3,5 +3,5 @@
   tasks:
     - name: Start service apache, if not started
       service:
-        name: httpd
+        name: apache2
         state: started
