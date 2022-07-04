@@ -1,5 +1,6 @@
 ---
 - hosts: all
+  become: true
   tasks:
     - name: Install apache httpd
       yum:
@@ -11,10 +12,16 @@
           name: httpd
           state: started
 
+    - name: Git install
+      yum:
+          name: git
+          state: latest
+
     - name: Git veo-2048
-      git:
-          repo: 'https://github.com/AdrianVicenteGarcia/vue-2048.git'
-          dest: /var/www/html
-          version: main
+      ansible.builtin.git:
+          repo: 'https://github.com/AdrianVicenteGarcia/vue-2048.git/'
+
+          dest: /var/www/html/
+
 
 
