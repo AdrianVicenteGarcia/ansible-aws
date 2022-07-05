@@ -1,3 +1,4 @@
-63.33.57.235 ansible_user=ec2-user
+[java]
+54.171.130.119 ansible_user=ec2-user
 
 
